@@ -17,7 +17,7 @@ window.onload = function() {
     var game = new Phaser.Game(canvasWidth, canvasHeight, Phaser.AUTO, '', { preload: preload, create: create, update: update });
 
     function preload() {
-        game.load.image('elephant', 'elephant.png');
+        game.load.image('elephant', 'cobra_64_64.png');
         game.load.image('apple', 'apple.png');
     }
 
