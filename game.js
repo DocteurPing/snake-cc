@@ -1,7 +1,7 @@
 window.onload = function() {
 
     // variables that will hold objects
-    var head, tail, cursors, snake, apple, gameText, playerDirection;
+    var head, tail, cursors, snake, apple, gameText, playerDirection, actualDirection;
     var directions = Object.freeze({up: 0, down: 1, right: 2, left: 3});
     
     // configuration variables and starting values
@@ -141,28 +141,32 @@ window.onload = function() {
     // movement functions
 
     function updateDirection() {
-        if (cursors.right.isDown && playerDirection != directions.left) {
+        if (cursors.right.isDown && actualDirection != directions.left) {
             playerDirection = directions.right;
         }
-        if (cursors.left.isDown && playerDirection != directions.right) {
+        if (cursors.left.isDown && actualDirection != directions.right) {
             playerDirection = directions.left;
         }
-        if (cursors.up.isDown && playerDirection != directions.down) {
+        if (cursors.up.isDown && actualDirection != directions.down) {
             playerDirection = directions.up;
         }
-        if (cursors.down.isDown && playerDirection != directions.up) {
+        if (cursors.down.isDown && actualDirection != directions.up) {
             playerDirection = directions.down;
         }
     }
 
     function movePlayer() {
         if (playerDirection == directions.right) {
+            actualDirection = directions.right;
             x += playerSize;
         } else if (playerDirection == directions.left) {
+            actualDirection = directions.left;
             x -= playerSize;
         } else if (playerDirection == directions.up) {
+            actualDirection = directions.up;
             y -= playerSize;
         } else if (playerDirection == directions.down) {
+            actualDirection = directions.down;
             y += playerSize;
         }
         if (x <= 0 - playerSize) {
