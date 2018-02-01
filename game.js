@@ -2,13 +2,13 @@ window.onload = function ()
 {
 
 	// variables that will hold objects
-	var head
-	var tail
-	var cursors
-	var snake
-	var apple
-	var gameText
-	var playerDirection
+	var head;
+	var tail;
+	var cursors;
+	var snake;
+	var apple;
+	var gameText;
+	var playerDirection;
 	var actualDirection;
 	var directions = Object.freeze(
 		{
@@ -20,7 +20,7 @@ window.onload = function ()
 	);
 
 	// configuration variables and starting values
-	var canvasWidth = 832
+	var canvasWidth = 832;
 	var canvasHeight = 640;
 	var playerSize = 64;
 	var x = 128, y = 0;
