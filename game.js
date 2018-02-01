@@ -78,7 +78,8 @@ window.onload = function ()
 				apple.destroy();
 				placeRandomApple();
 				gameSpeed = gameSpeed - 1;
-				if (gameSpeed <= 5){
+				if (gameSpeed <= 5)
+				{
 					gameSpeed = 5;
 				}
 			}
