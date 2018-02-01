@@ -45,7 +45,7 @@ window.onload = function () {
 	function update() {
 		gameText.text = score;
 		updateDirection();
-		frameCounter++;
+		frameCounter = frameCounter + 1;
 		if (frameCounter == gameSpeed)
 		{
 			movePlayer();
@@ -138,7 +138,7 @@ window.onload = function () {
 		var numTimes = 0;
 		while (needle != null)
 		{
-			numTimes++;
+			numTimes = numTimes + 1;
 			if (apple.position.x == needle.image.position.x
 				&& apple.position.y == needle.image.position.y)
 			{
@@ -225,5 +225,4 @@ window.onload = function () {
 			newHead(x, y);
 		}
 	}
-
 };
